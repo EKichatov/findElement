@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
         }
         NSInteger number = rand()%150 +5;
         NSInteger index = [FindElement findElement:array number:number];
-        if(index==-1 || array[index+1].integerValue<= number || array[index].integerValue>number)
+        if(index==-1 || (index<array.count-1 && array[index+1].integerValue<= number )|| array[index].integerValue>number)
             printf("NO");
         else
             printf("YES");

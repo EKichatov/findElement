@@ -12,12 +12,21 @@
 
 + (NSInteger)findElement:(NSArray<NSNumber *> *)array number:(NSInteger)number
 {
-    for(NSInteger i=array.count-1;i>=0;i--)
+    NSInteger left = 0;
+    NSInteger right = array.count;
+    while(left < right - 1)
     {
-        if(array[i].integerValue<=number)
-            return i;
+        NSInteger middle = left+(right - left)/2;
+        if(array[middle].integerValue<=number)
+        {
+            left =middle;
+        }
+        else
+        {
+            right = middle;
+        }
     }
-    return -1;
+    return left;
 }
 
 @end
