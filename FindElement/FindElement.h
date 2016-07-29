@@ -10,4 +10,6 @@
 
 @interface FindElement : NSObject
 
++(NSInteger)findElement:(NSArray<NSNumber*>*)array number:(NSInteger)number;
+
 @end
