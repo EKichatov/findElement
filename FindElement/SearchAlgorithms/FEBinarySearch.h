@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FEISearchAlgorithm.h"
 
-@interface FindElement : NSObject
+@interface FEBinarySearch : NSObject<FEISearchAlgorithm>
 
-+(NSInteger)findElement:(NSArray<NSNumber*>*)array number:(NSInteger)number;
+- (NSInteger)indexOfNumberIn:(NSArray<NSNumber*>*)array lowerThan:(NSInteger)number;
 
 @end
