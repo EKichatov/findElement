@@ -7,22 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FindElement.h"
+#import "FEAlgorithmAssembly.h"
+#import "FEInput.h"
+#import "FEOutput.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSMutableArray<NSNumber*>* array = [NSMutableArray new];
-        [array addObject:[NSNumber numberWithInteger:1]];
-        for(int i=1;i<150;i++)
-        {
-            [array addObject:[NSNumber numberWithInteger:array[i-1].integerValue +5]];
-        }
-        NSInteger number = rand()%150 +5;
-        NSInteger index = [FindElement findElement:array number:number];
-        if(index==-1 || (index<array.count-1 && array[index+1].integerValue<= number )|| array[index].integerValue>number)
-            printf("NO");
-        else
-            printf("YES");
+        FEInput *input = [FEInput new];
+        NSArray<NSNumber*> *array = input.sourceArray;
+        NSInteger number = arc4random()%array.count + 5;
+        FEAlgorithmAssembly *assembly = [FEAlgorithmAssembly new];
+        id<FEISearchAlgorithm> searchAlgorithm = assembly.searchAlgorithm;
+        NSInteger index = [searchAlgorithm indexOfNumberIn:array lowerThan:number];
+        FEOutput *output = [FEOutput new];
+        NSLog(@"%@",[output formatResult:index]);
     }
     return 0;
 }

@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8B35B72D1D4BAD170051239C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B35B72C1D4BAD170051239C /* main.m */; };
-		8B35B7351D4BAEA80051239C /* FindElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B35B7341D4BAEA80051239C /* FindElement.m */; };
+		8C71364A1D4EB16A003901B9 /* FEBinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7136461D4EAF6D003901B9 /* FEBinarySearch.m */; };
+		8C71364B1D4EB16A003901B9 /* FEDummySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7136481D4EAF6D003901B9 /* FEDummySearch.m */; };
+		8C71364E1D4EB322003901B9 /* FEAlgorithmAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C71364D1D4EB322003901B9 /* FEAlgorithmAssembly.m */; };
+		8C7136521D4EB3F8003901B9 /* FEInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7136511D4EB3F8003901B9 /* FEInput.m */; };
+		8C7136561D4EB56C003901B9 /* FEOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7136551D4EB56C003901B9 /* FEOutput.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +30,17 @@
 /* Begin PBXFileReference section */
 		8B35B7291D4BAD170051239C /* FindElement */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FindElement; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B35B72C1D4BAD170051239C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8B35B7331D4BAEA80051239C /* FindElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindElement.h; sourceTree = "<group>"; };
-		8B35B7341D4BAEA80051239C /* FindElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindElement.m; sourceTree = "<group>"; };
+		8C7136451D4EAF6D003901B9 /* FEBinarySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FEBinarySearch.h; sourceTree = "<group>"; };
+		8C7136461D4EAF6D003901B9 /* FEBinarySearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FEBinarySearch.m; sourceTree = "<group>"; };
+		8C7136471D4EAF6D003901B9 /* FEDummySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FEDummySearch.h; sourceTree = "<group>"; };
+		8C7136481D4EAF6D003901B9 /* FEDummySearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FEDummySearch.m; sourceTree = "<group>"; };
+		8C7136491D4EAF86003901B9 /* FEISearchAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEISearchAlgorithm.h; sourceTree = "<group>"; };
+		8C71364C1D4EB322003901B9 /* FEAlgorithmAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEAlgorithmAssembly.h; sourceTree = "<group>"; };
+		8C71364D1D4EB322003901B9 /* FEAlgorithmAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEAlgorithmAssembly.m; sourceTree = "<group>"; };
+		8C7136501D4EB3F8003901B9 /* FEInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEInput.h; sourceTree = "<group>"; };
+		8C7136511D4EB3F8003901B9 /* FEInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEInput.m; sourceTree = "<group>"; };
+		8C7136541D4EB56C003901B9 /* FEOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEOutput.h; sourceTree = "<group>"; };
+		8C7136551D4EB56C003901B9 /* FEOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEOutput.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +73,44 @@
 		8B35B72B1D4BAD170051239C /* FindElement */ = {
 			isa = PBXGroup;
 			children = (
+				8C7136531D4EB55B003901B9 /* FEOutput */,
+				8C71364F1D4EB3E9003901B9 /* FEInput */,
+				8C7136441D4EAF6D003901B9 /* SearchAlgorithms */,
 				8B35B72C1D4BAD170051239C /* main.m */,
-				8B35B7331D4BAEA80051239C /* FindElement.h */,
-				8B35B7341D4BAEA80051239C /* FindElement.m */,
+				8C71364C1D4EB322003901B9 /* FEAlgorithmAssembly.h */,
+				8C71364D1D4EB322003901B9 /* FEAlgorithmAssembly.m */,
 			);
 			path = FindElement;
+			sourceTree = "<group>";
+		};
+		8C7136441D4EAF6D003901B9 /* SearchAlgorithms */ = {
+			isa = PBXGroup;
+			children = (
+				8C7136451D4EAF6D003901B9 /* FEBinarySearch.h */,
+				8C7136461D4EAF6D003901B9 /* FEBinarySearch.m */,
+				8C7136471D4EAF6D003901B9 /* FEDummySearch.h */,
+				8C7136481D4EAF6D003901B9 /* FEDummySearch.m */,
+				8C7136491D4EAF86003901B9 /* FEISearchAlgorithm.h */,
+			);
+			path = SearchAlgorithms;
+			sourceTree = "<group>";
+		};
+		8C71364F1D4EB3E9003901B9 /* FEInput */ = {
+			isa = PBXGroup;
+			children = (
+				8C7136501D4EB3F8003901B9 /* FEInput.h */,
+				8C7136511D4EB3F8003901B9 /* FEInput.m */,
+			);
+			path = FEInput;
+			sourceTree = "<group>";
+		};
+		8C7136531D4EB55B003901B9 /* FEOutput */ = {
+			isa = PBXGroup;
+			children = (
+				8C7136541D4EB56C003901B9 /* FEOutput.h */,
+				8C7136551D4EB56C003901B9 /* FEOutput.m */,
+			);
+			path = FEOutput;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C71364A1D4EB16A003901B9 /* FEBinarySearch.m in Sources */,
+				8C7136521D4EB3F8003901B9 /* FEInput.m in Sources */,
+				8C71364B1D4EB16A003901B9 /* FEDummySearch.m in Sources */,
+				8C7136561D4EB56C003901B9 /* FEOutput.m in Sources */,
+				8C71364E1D4EB322003901B9 /* FEAlgorithmAssembly.m in Sources */,
 				8B35B72D1D4BAD170051239C /* main.m in Sources */,
-				8B35B7351D4BAEA80051239C /* FindElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +295,7 @@
 				8B35B7321D4BAD170051239C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

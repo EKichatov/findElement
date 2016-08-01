@@ -6,11 +6,11 @@
 //  Copyright © 2016 Developer. All rights reserved.
 //
 
-#import "FindElement.h"
+#import "FEBinarySearch.h"
 
-@implementation FindElement
+@implementation FEBinarySearch
 
-+ (NSInteger)findElement:(NSArray<NSNumber *> *)array number:(NSInteger)number
+- (NSInteger)indexOfNumberIn:(NSArray<NSNumber*>*)array lowerThan:(NSInteger)number
 {
     NSInteger left = 0;
     NSInteger right = array.count;
@@ -19,12 +19,16 @@
         NSInteger middle = left+(right - left)/2;
         if(array[middle].integerValue<=number)
         {
-            left =middle;
+            left = middle;
         }
         else
         {
             right = middle;
         }
+    }
+    if(left >= number)
+    {
+        return -1;
     }
     return left;
 }
